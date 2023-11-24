@@ -360,9 +360,13 @@ def test_client_with_http_network():
         assert "`chain_name` is not provided" in str(exception)
 
 
-# @pytest.mark.asyncio
-# async def test_client_live():
-#     client = PragmaClient(network="testnet")
+@pytest.mark.asyncio
+async def test_client_live():
+    client = PragmaClient(network="mainnet")
 
-#     print(await client.get_spot("BTC/USD"))
-#     print(await client.get_future("BTC/USD", expiry_timestamp=0))
+    print(await client.get_spot("BTC/USD"))
+    print(await client.get_spot("ETH/USD"))
+    print(await client.get_spot("USDC/USD"))
+    # print(await client.get_decimals(DataType(DataTypes.SPOT, "USDC/USD", None)))
+    # print(await client.get_spot("WBTC/USDC"))
+    print(await client.get_future("BTC/USD", expiry_timestamp=0))
