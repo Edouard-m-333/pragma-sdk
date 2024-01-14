@@ -18,7 +18,7 @@ packages = [{ include = "pragma" }]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.10"
-"starknet.py" = "0.18.3"
+"starknet.py" = { git = "https://github.com/software-mansion/starknet.py", rev = "v0.19.0-alpha" }
 cairo-lang = "^0.12"
 typer = "0.6.1"
 deprecated = "^1.2.14"
